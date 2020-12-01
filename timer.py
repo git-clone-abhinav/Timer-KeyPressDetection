@@ -11,22 +11,27 @@ def loading_screen():
 
 def loading_bar(seconds):
     for loading in range(0, seconds+1):
-        percent = (loading * 100) // seconds
         print("\n")
         print("Press Enter to enter Setup")
         print("<" + ("✈ " * loading) + ("" * (seconds + loading)) +">")
         print("\n")
-        time.sleep(1)
+        waiting_keypress(seconds)
+
+def waiting_keypress(seconds):
+        
+    for loading in range(0,seconds+1):
+        
         if keyboard.is_pressed("enter"):
             id=1
             os.system('cls' if os.name == "nt" else "clear")
             break
-        os.system('cls' if os.name == "nt" else "clear")
-        loading_screen()
+            os.system('cls' if os.name == "nt" else "clear")
+
+        time.sleep(1)
         
 
 
-loading_screen()
+#loading_screen()
 loading_bar(seconds)
 
 if(id==1):
