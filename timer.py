@@ -19,14 +19,15 @@ def loading_bar(seconds):
             break
         else:
             id=0
-            time.sleep(0)
+            time.sleep(1)
             print("Not Pressed")
 
 
 loading_screen()
 loading_bar(seconds)
 
-if(id==1):
+'''if(id==1):
     print("Entering CCThinClient Setup")
 elif(id==0):
     print("Loading Client ..")
+'''
