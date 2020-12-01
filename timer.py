@@ -1,8 +1,22 @@
-import time
-import keyboard
-import os
-seconds = 10
+import sys ,time ,keyboard ,os
+
+timeout = 5
 id = 0
+seconds = 10
+
+start_time = time.time()
+
+while True:
+    if keyboard.is_pressed("enter"):
+        id = 1
+        print("Break")
+        break
+    if id == 0 and (time.time() - start_time) > timeout:
+        print("timing out, using default value.")
+        break
+        
+
+
 
 def loading_screen():
     with open('ccnet.txt', 'r') as screen:
@@ -17,7 +31,7 @@ def loading_bar(seconds):
         print("\n")
         waiting_keypress(seconds)
 
-def waiting_keypress(seconds):
+'''def waiting_keypress(seconds):
         
     for loading in range(0,seconds+1):
         
@@ -27,14 +41,15 @@ def waiting_keypress(seconds):
             break
             os.system('cls' if os.name == "nt" else "clear")
 
-        time.sleep(1)
+        time.sleep(1)'''
         
 
 
 #loading_screen()
-loading_bar(seconds)
+#loading_bar(seconds)
 
-if(id==1):
+'''if(id==1):
     print("Entering CCThinClient Setup")
 elif(id==0):
     print("Loading Client ..")
+'''

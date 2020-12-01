@@ -1,5 +1,7 @@
 import sys, time, msvcrt
 
+
+
 def readInput( caption, default, timeout = 5):
 
     start_time = time.time()
