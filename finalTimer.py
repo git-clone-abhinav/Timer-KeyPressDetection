@@ -18,4 +18,3 @@ while True:
         break
     #time.sleep(1)
     #os.system("cls")
-    
